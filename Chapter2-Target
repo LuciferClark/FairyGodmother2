@@ -30,7 +30,7 @@ def connect():
             break
 
         elif 'grab' in command:
-            grab.path = command.split('*')
+            grab,path = command.split('*')
 
             try:
                 transfer(s, path)
